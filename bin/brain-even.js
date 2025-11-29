@@ -10,7 +10,7 @@ const playGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   const roundsCount = 3;
-  
+
   for (let i = 0; i < roundsCount; i += 1) {
     const number = getRandomNumber(1, 100);
     console.log(`Question: ${number}`);

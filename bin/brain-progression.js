@@ -8,11 +8,11 @@ const generateProgression = () => {
   const start = getRandomNumber(1, 50);
   const step = getRandomNumber(2, 10);
   const progression = [];
-  
+
   for (let i = 0; i < length; i += 1) {
     progression.push(start + step * i);
   }
-  
+
   return progression;
 };
 
@@ -28,10 +28,10 @@ const playGame = () => {
     const progression = generateProgression();
     const hiddenIndex = getRandomNumber(0, progression.length - 1);
     const correctAnswer = progression[hiddenIndex];
-    
+
     const questionProgression = [...progression];
     questionProgression[hiddenIndex] = '..';
-    
+
     console.log(`Question: ${questionProgression.join(' ')}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
